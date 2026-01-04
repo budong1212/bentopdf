@@ -3,20 +3,16 @@
   "outputDirectory": "dist",
   "rewrites": [
     {
-      "source": "/src/pages/(.*)",
-      "destination": "/$1"
+      "source": "/(en|de|zh|vi)/:path(.*\\.html)",
+      "destination": "/:path"
     },
     {
-      "source": "/(en|de|zh|vi)/(.*)",
-      "destination": "/$2"
+      "source": "/(en|de|zh|vi)/:path*",
+      "destination": "/:path*"
     },
     {
       "source": "/(en|de|zh|vi)",
       "destination": "/index.html"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/$1"
     }
   ],
   "headers": [
